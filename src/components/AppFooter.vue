@@ -1,8 +1,10 @@
 <script>
-// import ...... from "...."
+import AppFooterTop from "./AppFooterTop.vue";
+import AppFooterMain from "./AppFooterMain.vue";
+import AppFooterBottom from "./AppFooterBottom.vue";
 
 export default {
-  // components: {}
+  components: { AppFooterTop, AppFooterMain, AppFooterBottom },
 
   data() {
     return {};
@@ -12,9 +14,9 @@ export default {
 
 <template>
   <footer>
-    <div class="footer-top"></div>
-    <div class="footer-main"></div>
-    <div class="footer-bottom"></div>
+    <AppFooterTop />
+    <AppFooterMain />
+    <AppFooterBottom />
   </footer>
 </template>
 
@@ -23,21 +25,5 @@ export default {
 
 footer {
   background-color: $background-color-footer;
-  .footer-top {
-    height: $height-footer-top;
-
-    background-color: $color-secondary;
-  }
-
-  .footer-main {
-    height: $height-footer-main;
-    background-image: url("../../public/img/footer-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .footer-bottom {
-    height: $height-footer-bottom;
-  }
 }
 </style>
