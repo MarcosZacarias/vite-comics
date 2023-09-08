@@ -1,6 +1,55 @@
 @use "./partials/mixins" as *;
 @use "./partials/variables" as *;
 
+// Reset
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  background-color: wheat;
+  height: 100vh;
+}
+
+// Layout
+
+header,
+main,
+.footer-top,
+.footer-main,
+.footer-bottom {
+  .wrapper {
+    @include wrapper();
+  }
+}
+
+// Main
+
+main {
+  height: 100px;
+
+  background-color: black;
+}
+
+// Footer
+
+footer {
+  background-color: $background-color-footer;
+  .footer-top {
+    height: $height-footer-top;
+
+    background-color: $color-secondary;
+  }
+
+  .footer-main {
+    height: $height-footer-main;
+    background-image: url("../../public/img/footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .footer-bottom {
+    height: $height-footer-bottom;
+  }
 }

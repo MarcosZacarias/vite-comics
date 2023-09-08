@@ -4,7 +4,7 @@ import MainContent from "./components/MainContent.vue";
 import AppFooter from "./components/AppFooter.vue";
 
 export default {
-  components: {},
+  components: { AppHeader, MainContent, AppFooter },
 };
 </script>
 
@@ -14,8 +14,4 @@ export default {
   <AppFooter />
 </template>
 
-<style lang="scss">
-h1 {
-  color: red;
-}
-</style>
+<style lang="scss"></style>
