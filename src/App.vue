@@ -1,15 +1,17 @@
 <script>
+import AppHeader from "./components/AppHeader.vue";
+import MainContent from "./components/MainContent.vue";
+import AppFooter from "./components/AppFooter.vue";
+
 export default {
-  data() {
-    return {
-      message: "hello",
-    };
-  },
+  components: {},
 };
 </script>
 
 <template>
-  <h1>{{ message }}</h1>
+  <AppHeader />
+  <MainContent />
+  <AppFooter />
 </template>
 
 <style lang="scss">
