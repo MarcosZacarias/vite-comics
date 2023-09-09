@@ -63,7 +63,8 @@ export default {
           </ul>
         </div>
       </div>
-      <div></div>
+
+      <img src="../../public/img/dc-logo-bg.png" alt="" />
     </div>
   </div>
 </template>
@@ -78,10 +79,11 @@ export default {
   background-size: cover;
 
   .wrapper {
-    padding: 2rem 0 2rem 0;
     display: flex;
+    justify-content: space-between;
 
     .list-links {
+      padding: 2rem 0 2rem 0;
       height: 100%;
       width: 50%;
       display: flex;
@@ -89,6 +91,12 @@ export default {
       flex-wrap: wrap;
 
       gap: 1rem;
+    }
+
+    img {
+      width: 40%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
