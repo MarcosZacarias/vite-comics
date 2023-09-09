@@ -87,6 +87,8 @@ export default {
   justify-content: space-between;
   align-items: center;
 
+  padding: 0.5rem 0 0.5rem 0;
+
   ul {
     flex-grow: 1;
 
