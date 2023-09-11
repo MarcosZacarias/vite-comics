@@ -21,8 +21,7 @@ export default {
         <CardMain
           v-for="comic in dcComics"
           :key="comic.series"
-          :thumb="comic.thumb"
-          :series="comic.series"
+          :comic="comic"
         />
       </div>
     </div>
