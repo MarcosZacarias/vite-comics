@@ -15,16 +15,18 @@ export default {
 
 <template>
   <main>
-    <div class="wrapper">
-      <h2>CURRENT SERIES</h2>
-      <div class="container-cards">
-        <CardMain
-          v-for="comic in dcComics"
-          :key="comic.series"
-          :comic="comic"
-        />
+    <div class="jumbotron">
+      <div class="wrapper">
+        <h2>CURRENT SERIES</h2>
+        <div class="container-cards">
+          <CardMain
+            v-for="comic in dcComics"
+            :key="comic.series"
+            :comic="comic"
+          />
+        </div>
+        <button>Load More</button>
       </div>
-      <button>Load More</button>
     </div>
   </main>
 </template>
@@ -32,21 +34,26 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/partials/variables" as *;
 
+main {
+  .jumbotron {
+    &::before {
+      display: block;
+      content: "";
+      background-image: url("../../public/img/jumbotron.jpg");
+      background-size: cover;
+      width: 100%;
+      height: 400px;
+    }
+  }
+}
+
 .wrapper {
   color: white;
+  margin-top: -30px;
   padding: 1rem 0 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  &::before {
-    display: block;
-    content: "";
-    background-image: url("../../public/img/jumbotron.jpg");
-    background-size: cover;
-    width: 100%;
-    height: 200px;
-  }
 
   h2 {
     padding: 0.2rem;
