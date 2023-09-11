@@ -15,18 +15,18 @@ export default {
 
 <template>
   <main>
-    <div class="jumbotron">
-      <div class="wrapper">
-        <h2>CURRENT SERIES</h2>
-        <div class="container-cards">
-          <CardMain
-            v-for="comic in dcComics"
-            :key="comic.series"
-            :comic="comic"
-          />
-        </div>
-        <button>Load More</button>
+    <div class="jumbotron"></div>
+
+    <div class="wrapper">
+      <h2>CURRENT SERIES</h2>
+      <div class="container-cards">
+        <CardMain
+          v-for="comic in dcComics"
+          :key="comic.series"
+          :comic="comic"
+        />
       </div>
+      <button>Load More</button>
     </div>
   </main>
 </template>
@@ -36,14 +36,10 @@ export default {
 
 main {
   .jumbotron {
-    &::before {
-      display: block;
-      content: "";
-      background-image: url("../../public/img/jumbotron.jpg");
-      background-size: cover;
-      width: 100%;
-      height: 400px;
-    }
+    background-image: url("../../public/img/jumbotron.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 400px;
   }
 }
 

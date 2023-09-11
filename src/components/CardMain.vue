@@ -5,6 +5,17 @@ export default {
   props: {
     comic: Object,
   },
+
+  methods: {
+    uppercase() {
+      const result = this.comic.series.toUpperCase();
+      console.log(result);
+    },
+  },
+
+  // computed: {
+  //   uppercase,
+  // },
 };
 </script>
 
@@ -64,6 +75,9 @@ export default {
       object-fit: cover;
       object-position: 0% 0%;
     }
+  }
+  .card-text {
+    text-transform: uppercase;
   }
 }
 </style>
